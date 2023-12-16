@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#body{
+    background: rgb(18,19,20);
+    background: linear-gradient(4deg, rgba(18,19,20,1) 16%, rgba(14,25,52,1) 94%);
+} 
+
+.nav{
+  @apply bg-none flex items-center justify-between py-5  md:container md:mx-auto relative tracking-[1px] 
+}
+
+.item{
+    @apply relative tracking-[-1px] hover:text-white cursor-pointer
+}
+.item::after{
+    @apply content-[''] bg-[#3154E2] h-[3px] w-[0%] left-0 -bottom-[5px]
+    rounded-xl absolute duration-300
+}
+.item:hover::after{
+    @apply w-[100%] 
+}
