@@ -4,7 +4,9 @@ import './globals.css'
 import NavBar from '@/components/NavBar'
 import Hero from '@/components/Hero'
 import Proyects from '@/components/Proyects'
-import Form from '@/components/Form'
+import Form from '@/components/Form/Form'
+import Footer from '@/components/Footer'
+import {motion} from 'framer-motion'
 
 const inter = Inter({ subsets: ['latin'] })
 const workSans = Work_Sans({
@@ -22,12 +24,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body id='body' className="text-[#E3E4E6] font-['Montserrat']">
-        <main className='max-w-[80%] mx-auto '>
+        <div className='max-w-[80%] mx-auto '>
           <NavBar className={workSans.className} />
           <Hero />
           <Proyects />
           <Form/>
-        </main>
+          <Footer/>
+        </div>
         {children}
       </body>
     </html>

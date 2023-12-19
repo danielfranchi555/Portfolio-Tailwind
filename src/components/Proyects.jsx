@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import ecommerce from '../../public/proyect-1-hd.jpg'
+import ecommerceDos from '../../public/ecommerce-google.png'
 const Proyects = () => {
   return (
     <div className=' w-[90%] mx-auto  grid gap-10 mt-40  md:w-full'>
-      <h2 className=' text-center md:text-start text-4xl  text-slate-500'>Mis <span className='text-bold text-white'>Proyectos </span> </h2>
-      <div className='flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-10 md:h-[390px]  ' >
-        <div className=' md:w-[70%] md:h-full  '>
+      <h2 id='proyectos' className=' text-center md:text-start text-4xl  text-slate-500'>Mis <span className='text-bold text-white'>Proyectos </span> </h2>
+      <div  className=' flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-10 md:h-[390px' >
+        <div className=' md:w-[70%] md:h-full proyect-image '>
           <Image
             src={ecommerce}
             width={300}
@@ -32,9 +33,9 @@ const Proyects = () => {
 
       </div>
       <div className='flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-10 md:h-[390px]  ' >
-        <div className=' md:w-[70%] md:h-full md:order-2 '>
+        <div className=' md:w-[70%] md:h-full md:order-2 proyect-image '>
           <Image
-            src={ecommerce}
+            src={ecommerceDos}
             width={300}
             height={300}
             alt='imagen '
@@ -51,14 +52,14 @@ const Proyects = () => {
             </div>
             <div className=' md:flex md:flex-col md:gap-5'>
               <span>website design</span>
-              <a href="" className=' border py-3 w-[40%] rounded-md px-3 block  '>ver trabajo</a>
+              <a href="" className=' border py-3 w-[40%] rounded-md px-3 block bg-[#3154E2] '>ver trabajo</a>
             </div>
           </div>
         </section>
 
       </div>
       <div className='flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-10 md:h-[390px]  ' >
-        <div className=' md:w-[70%] md:h-full  '>
+        <div className=' md:w-[70%] md:h-full proyect-image  '>
           <Image
             src={ecommerce}
             width={300}

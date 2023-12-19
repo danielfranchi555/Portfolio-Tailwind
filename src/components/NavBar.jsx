@@ -12,8 +12,8 @@ const NavBar = () => {
 
            <ul className="  bg-[#010208] p-12 mt-24 font-bold grid gap-6 inset-x-0 text-center w-[90%] mx-auto shadow-lg rounded-md h-max md:bg-transparent md:w-max  md:p-0 md:grid-flow-col md:mt-0 md:shadow-none">
             <li><a href="" className="item cursor-pointer">Inicio</a></li>
-            <li><a href="" className="item cursor-pointer">Proyectos</a></li>
-            <li><a href="" className="item cursor-pointer">Contacto</a></li>
+            <li><a href="#proyectos" className="item cursor-pointer">Proyectos</a></li>
+            <li><a href="#contacto" className="item cursor-pointer">Contacto</a></li>
             <li><a href="" className="item cursor-pointer">Acerca de mi</a></li>
          </ul>
 
