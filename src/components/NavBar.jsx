@@ -15,7 +15,7 @@ const NavBar = () => {
 
 
   return (
-    <nav id="nav" className='nav '>
+    <nav id="nav" className='nav px-5 sm:px-5 md:px-0 '>
       <a href="" className='text-[#E3E4E6]'>DFranchi</a>
       <input type="checkbox" id='menu' className='peer hidden' checked={isMenuOpen} onChange={toggleMenu} />
       <label className='bg-close-menu w-10 bg-cover bg-center h-10 cursor-pointer z-50 transition-all md:hidden' htmlFor="menu"></label>

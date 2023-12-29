@@ -52,7 +52,7 @@ const Hero = () => {
     <div  className='text-center items-center mt-10    '>
 
         <div  className='flex items-center flex-col md:justify-bettween md:flex-row'>
-        <div data-aos = "fade-right"  className='hidden md:block  md:text-left md:w-[60%]  ' >
+        <div  data-aos="fade-right"  className='hidden md:block  md:text-left md:w-[60%] ' >
         <h2  className='md:text-5xl sm:text-2xl text-slate-500'>Yo soy <span className='font-bold text-white'>Daniel Franchi</span> </h2>
         <h2  className='md:text-5xl sm:text-2xl text-slate-500'> <span className='font-bold text-white'>Front-end </span>Developer</h2>
         <p  className='my-5'>Soy un desarrollador front-end con un enfoque dedicado en transformar ideas creativas en experiencias digitales asombrosas
