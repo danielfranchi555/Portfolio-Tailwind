@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body id='body' className="text-[#E3E4E6] font-['Montserrat']">
-        <div className='md:max-w-[80%] w-[100%] mx-auto  md:verflow-visible '>
+        <div className='md:max-w-[80%] w-[100%] mx-auto overflow-hidden  md:overflow-visible '>
             <NavBar className={workSans.className} />
             <Hero />
             <Proyects />
