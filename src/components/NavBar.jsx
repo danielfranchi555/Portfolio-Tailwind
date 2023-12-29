@@ -1,8 +1,6 @@
 "use client"
 import { useState } from 'react';
 
-
-
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,7 +15,7 @@ const NavBar = () => {
 
 
   return (
-    <nav id="nav" className='nav'>
+    <nav id="nav" className='nav bg-red-500'>
       <a href="" className='text-[#E3E4E6]'>DFranchi</a>
       <input type="checkbox" id='menu' className='peer hidden' checked={isMenuOpen} onChange={toggleMenu} />
       <label className='bg-close-menu w-10 bg-cover bg-center h-10 cursor-pointer z-50 transition-all md:hidden' htmlFor="menu"></label>
