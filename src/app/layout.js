@@ -28,13 +28,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body id='body' className="text-[#E3E4E6] font-['Montserrat']">
         <div className='max-w-[80%] mx-auto '>
-          <Container>
             <NavBar className={workSans.className} />
             <Hero />
             <Proyects />
             <Form />
             <Footer />
-          </Container>
         </div>
         {children}
       </body>
