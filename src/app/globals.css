@@ -2,46 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-#body{
-    background: rgb(18,19,20);
-    background: linear-gradient(4deg, rgba(18,19,20,1) 16%, rgba(14,25,52,1) 94%);
-} 
-
-.nav{
-  @apply bg-none flex items-center justify-between py-5  md:container md:mx-auto relative tracking-[1px] 
+#body {
+    background: rgb(18, 19, 20);
+    background: linear-gradient(4deg, rgba(18, 19, 20, 1) 16%, rgba(14, 25, 52, 1) 94%);
 }
 
-.item{
+.nav {
+    @apply bg-none flex items-center justify-between py-5 md:container md:mx-auto relative tracking-[1px]
+}
+
+.item {
     @apply relative tracking-[-1px] hover:text-white cursor-pointer
 }
-.item::after{
-    @apply content-[''] bg-[#3154E2] h-[3px] w-[0%] left-0 -bottom-[5px]
-    rounded-xl absolute duration-300
+
+.item::after {
+    @apply content-[''] bg-[#3154E2] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
 }
-.item:hover::after{
-    @apply w-[100%] 
+
+.item:hover::after {
+    @apply w-[100%]
 }
-@keyframes show{
-    from{
+
+@keyframes show {
+    from {
         opacity: 0;
         scale: 25%;
     }
-    to{
-     opacity: 1;
-     scale: 100%;
+
+    to {
+        opacity: 1;
+        scale: 100%;
     }
 }
 
-.proyect-image{
-    view-timeline-name: --card;
-    view-timeline-axis: block;
 
-    animation-timeline: --card;
-    animation-name: show;
-
-    animation-range: entry 35% cover 50%;
-    animation-fill-mode: both;
-}
-html{
+html {
     scroll-behavior: smooth;
 }
