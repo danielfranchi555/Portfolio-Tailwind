@@ -39,3 +39,46 @@
 html {
     scroll-behavior: smooth;
 }
+
+.mi-imagen {
+
+    opacity: 0; /* Configuramos la opacidad inicial a 0 para el efecto fade-in */
+    left: -200px; /* Configuramos la posición inicial a la izquierda, fuera de la vista */
+  
+    /* Aplicamos la animación */
+    animation: entrarDesdeIzquierda 3s ease-in-out forwards;
+  }
+  
+  /* Definimos la animación */
+  @keyframes entrarDesdeIzquierda {
+    0% {
+      opacity: 0; /* Inicialmente invisible */
+      left: -200px; /* Fuera de la vista a la izquierda */
+    }
+    100% {
+      opacity: 1; /* Completamente visible al final de la animación */
+      left: 0; /* Posición final a la derecha */
+    }
+  }
+  
+  .mi-imagenDos {
+    position: relative;
+    opacity: 0; /* Configuramos la opacidad inicial a 0 para el efecto fade-in */
+    right: -200px; /* Configuramos la posición inicial a la izquierda, fuera de la vista */
+  
+    /* Aplicamos la animación */
+    animation: entrarDesdeIzquierda 1s ease-in-out forwards;
+  }
+  
+  /* Definimos la animación */
+  @keyframes entrarDesdeIzquierda {
+    0% {
+      opacity: 0; /* Inicialmente invisible */
+      right: -200px; /* Fuera de la vista a la izquierda */
+    }
+    100% {
+      opacity: 1; /* Completamente visible al final de la animación */
+      right: 0; /* Posición final a la derecha */
+    }
+  }
+  

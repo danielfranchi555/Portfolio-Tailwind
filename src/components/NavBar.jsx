@@ -1,8 +1,11 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/Utils/MotionTransitions';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +18,13 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
+  
+
   return (
-    <motion.nav variants={fadeIn('top',0.1)} initial="hidden" animate="show" exit="hidden" id="nav" className='nav'>
+    <nav id="nav" className='nav'>
       <a href="" className='text-[#E3E4E6]'>DFranchi</a>
 
       <input type="checkbox" id='menu' className='peer hidden' checked={isMenuOpen} onChange={toggleMenu} />
@@ -30,7 +38,7 @@ const NavBar = () => {
           <li><a href="#" className="item cursor-pointer" onClick={closeMenu}>Acerca de mi</a></li>
         </ul>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
