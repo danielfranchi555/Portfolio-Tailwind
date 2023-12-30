@@ -5,13 +5,18 @@
 #body {
     background: rgb(18, 19, 20);
     background: linear-gradient(4deg, rgba(18, 19, 20, 1) 16%, rgba(14, 25, 52, 1) 94%);
+    font-family: var(-workSans-font);
+    font-weight: 300;
 }
 
 .nav {
+    font-family: var(-workSans-font);
+    font-weight: 500;
     @apply bg-none flex items-center justify-between py-5 md:container md:mx-auto relative tracking-[1px]
 }
 
 .item {
+  
     @apply relative tracking-[-1px] hover:text-white cursor-pointer
 }
 
@@ -40,45 +45,16 @@ html {
     scroll-behavior: smooth;
 }
 
-.mi-imagen {
+.title{
+    font-family: var(-workSans-font);
+    font-weight: 600;
+    letter-spacing: 4px; /* Ajusta este valor según tus necesidades */
 
-    opacity: 0; /* Configuramos la opacidad inicial a 0 para el efecto fade-in */
-    left: -200px; /* Configuramos la posición inicial a la izquierda, fuera de la vista */
-  
-    /* Aplicamos la animación */
-    animation: entrarDesdeIzquierda 3s ease-in-out forwards;
-  }
-  
-  /* Definimos la animación */
-  @keyframes entrarDesdeIzquierda {
-    0% {
-      opacity: 0; /* Inicialmente invisible */
-      left: -200px; /* Fuera de la vista a la izquierda */
-    }
-    100% {
-      opacity: 1; /* Completamente visible al final de la animación */
-      left: 0; /* Posición final a la derecha */
-    }
-  }
-  
-  .mi-imagenDos {
-    position: relative;
-    opacity: 0; /* Configuramos la opacidad inicial a 0 para el efecto fade-in */
-    right: -200px; /* Configuramos la posición inicial a la izquierda, fuera de la vista */
-  
-    /* Aplicamos la animación */
-    animation: entrarDesdeIzquierda 1s ease-in-out forwards;
-  }
-  
-  /* Definimos la animación */
-  @keyframes entrarDesdeIzquierda {
-    0% {
-      opacity: 0; /* Inicialmente invisible */
-      right: -200px; /* Fuera de la vista a la izquierda */
-    }
-    100% {
-      opacity: 1; /* Completamente visible al final de la animación */
-      right: 0; /* Posición final a la derecha */
-    }
-  }
-  
+}
+.span{
+    font-family: var(-workSans-font);
+    font-weight: 300;
+    color: E3E4E6;
+    letter-spacing: 4px; /* Ajusta este valor según tus necesidades */
+
+}

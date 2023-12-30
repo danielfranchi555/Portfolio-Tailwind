@@ -7,11 +7,14 @@ import Hero from '@/components/Hero'
 import Proyects from '@/components/Proyects'
 import Footer from '@/components/Footer'
 import Form from '@/components/Form/Form'
-import Container from '@/components/Container'
+import AboutMe from '@/components/AboutMe'
 
 const inter = Inter({ subsets: ['latin'] })
-const workSans = Work_Sans({
+
+export const workSans = Work_Sans({
+  weight:['200','400'],
   subsets: ['latin'],
+
 })
 
 
@@ -26,11 +29,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body id='body' className="text-[#E3E4E6] font-['Montserrat']">
-        <div className='md:max-w-[80%] w-[100%] mx-auto overflow-hidden  md:overflow-visible '>
-            <NavBar className={workSans.className} />
-            <Hero />
+      <body id='body' className="text-[#E3E4E6] ">
+        <div  className='md:max-w-[80%] w-[100%] mx-auto overflow-hidden  md:overflow-visible '>
+            <NavBar />
+            <Hero className={workSans.className} />
             <Proyects />
+            <AboutMe/>
             <Form />
             <Footer />
         </div>

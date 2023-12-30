@@ -55,7 +55,7 @@ const Hero = () => {
         <div  data-aos="fade-right"  className='hidden md:block  md:text-left md:w-[60%] ' >
         <h2  className='md:text-5xl sm:text-2xl text-slate-500'>Yo soy <span className='font-bold text-white'>Daniel Franchi</span> </h2>
         <h2  className='md:text-5xl sm:text-2xl text-slate-500'> <span className='font-bold text-white'>Front-end </span>Developer</h2>
-        <p  className='my-5'>Soy un desarrollador front-end con un enfoque dedicado en transformar ideas creativas en experiencias digitales asombrosas
+        <p  className='my-5 md:text-2xl'>Soy un desarrollador front-end con un enfoque dedicado en transformar ideas creativas en experiencias digitales asombrosas
         </p>
          <a  href="" className='bg-[#3154E2] px-5 py-3 md:block md:w-[40%] md:text-center md:rounded-md'>HIRE ME</a>
 

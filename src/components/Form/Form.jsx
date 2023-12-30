@@ -23,7 +23,7 @@ const Form = () => {
     })
 
     return (
-        <div className=' py-5 mt-20 w-full  '>
+        <div className=' py-5 mt-20 w-full md:w-[60%] mx-auto  '>
             <h3 id='contacto' className='text-center text-4xl '>Contactame</h3>
             <div className='max-w-[90%] mx-auto text-center text-sm text-gray-400 py-4'>
                 <p className='md:text-md'>Tienes una idea? hablemos y veamos como podemos trabajar juntos para hacerla realidad!</p>
