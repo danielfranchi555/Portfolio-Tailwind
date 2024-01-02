@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 #body {
-    background: rgb(18, 19, 20);
-    background: linear-gradient(4deg, rgba(18, 19, 20, 1) 16%, rgba(14, 25, 52, 1) 94%);
+    background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
     font-family: var(-workSans-font);
     font-weight: 300;
 }
@@ -12,11 +11,10 @@
 .nav {
     font-family: var(-workSans-font);
     font-weight: 500;
-    @apply bg-none flex items-center justify-between py-5 md:container md:mx-auto relative tracking-[1px]
+    @apply flex items-center justify-between py-5 w-full sticky top-0 z-50
 }
 
 .item {
-  
     @apply relative tracking-[-1px] hover:text-white cursor-pointer
 }
 
@@ -45,16 +43,35 @@ html {
     scroll-behavior: smooth;
 }
 
-.title{
+.title {
     font-family: var(-workSans-font);
     font-weight: 600;
-    letter-spacing: 4px; /* Ajusta este valor según tus necesidades */
+    letter-spacing: 4px;
+    /* Ajusta este valor según tus necesidades */
 
 }
-.span{
+
+.span {
     font-family: var(-workSans-font);
     font-weight: 300;
     color: E3E4E6;
-    letter-spacing: 4px; /* Ajusta este valor según tus necesidades */
+    letter-spacing: 4px;
+    /* Ajusta este valor según tus necesidades */
+
+}
+
+
+#parrafo {
+    font-family: var(-inter-font);
+    font-weight: 400;
+    font-kerning: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    font-feature-settings: 'calt' off;
+    font-size: 16px;
+
 
 }

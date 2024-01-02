@@ -1,9 +1,26 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [nav,setNav] = useState(false)
+  
+ const scrollNav = ()=>{
+  if(window.scrollY >=20){
+    setNav(true)
+  }else{
+    setNav(false)
+  }
+ }
 
+
+ useEffect(()=>{
+  window.addEventListener('scroll',scrollNav)
+  return () =>{
+    window.addEventListener('scroll',scrollNav)
+  }
+ })
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -15,7 +32,9 @@ const NavBar = () => {
 
 
   return (
-    <nav id="nav" className='nav px-5 sm:px-5 md:px-0 '>
+    <>
+     <div className={nav ? "fixed w-full top-0 z-50 bg-black" : "bg-transparent"}>
+       <nav id="nav" className='nav px-5 sm:px-5   md:w-[80%] md:px-0 md:mx-auto' >
       <a href="" className='text-[#E3E4E6]'>DFRANCHI</a>
       <input type="checkbox" id='menu' className='peer hidden' checked={isMenuOpen} onChange={toggleMenu} />
       <label className='bg-close-menu w-10 bg-cover bg-center h-10 cursor-pointer z-50 transition-all md:hidden' htmlFor="menu"></label>
@@ -28,6 +47,9 @@ const NavBar = () => {
         </ul>
       </div>
     </nav>
+     </div>
+    </>
+   
   );
 };
 
