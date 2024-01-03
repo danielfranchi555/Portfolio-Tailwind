@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-
-        "close-menu": "url('../../public/menu.svg')"
+        "close-menu": "url('../../public/menu.svg')",
+        "hero": "url('../../public/Design.svg')"
+      },
+      colors: {
+        "nav": '#000',
       },
     },
   },

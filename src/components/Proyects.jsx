@@ -5,6 +5,7 @@ import ecommerce from '../../public/proyect-1-hd.jpg'
 import ecommerceDos from '../../public/tienda-proyect.jpg'
 import proyectDentist from '../../public/proyect-dentist-hd.jpg'
 import flecha from '../../public/flecha-derecha.svg'
+import arrow from '../../public/arrow-blue.svg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -18,89 +19,72 @@ const Proyects = () => {
 
 
   return (
-    <div id='proyectos' className=' w-[100%] mx-auto flex flex-col gap-5 md:grid mt-20 md:w-full'>
-      <h2 data-aos="zoom-in"  className=' text-center md:text-start text-3xl md:text-[40px]  lg:w-[290px]  text-slate-500'>Mis <span className='text-bold text-white'>Proyectos </span> </h2>
-      <div className=' flex flex-col gap-5 md:flex md:flex-col md:gap-10'>
-        <div className=' flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-5 md:h-[390px md:mt-[100px] ' >
-          <div data-aos="fade-right" className=' md:w-[40%] md:h-full  md:order-1 '>
-            <Image
-              src={ecommerce}
-              alt='imagen '
-              className='rounded-2xl md:min-w-[100%] md:h-[100%] '
-            />
-
-          </div>
-          <div className='md:w-[60%] md:order-2 h-full' >
-            <section data-aos="fade-left" className='md:flex md:items-end md:h-full  '>
-              <div className=' gap-2 flex flex-col  md:justify-between md:h-[250px]  '>
-                <div className=' grid gap-1 md:grid md:gap-5'>
-                  <h1 className='md:text-[16px] text-[#E3E4E6] font-semibold tracking-[0.64px] leading-[24px]'>ECOMMERCE </h1>
-                  <p className='md:text-1xl lg:text-[32px] font-ligth lg:leading-[48px] '>Ecommerce usando como base de datos Firebase y utilizando React Vite y Chakra UI Para los estilos</p>
-                </div>
-                <div className=' md:flex md:flex-col flex  flex-col gap-4 md:gap-5'>
-                  <span className='span md:text-[18px] font-light md:leading-[27px]'>website design</span>
-                  <a href="" className=' border py-3 w-[160px] text-sm rounded-xl px-3 md:px-2 md:py-2 md:text-sm lg:px-3 lg:py-3 lg:text-1xl flex justify-between  '>VER TRABAJO <Image src={flecha} width={20} height={20} alt='flecha' />  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-
+    <div id='proyectos' className='flex flex-col gap-5 mt-[190px]'>
+      <div className='md:flex md:flex-col md:items-center md:justify-center md:gap-5'>
+        <h4  data-aos="fade" className='text-[#0B0C0C] font-bold text-3xl '>Portfolio</h4>
+        <div className='md:max-w-[550px] text-center'>
+          <p  data-aos="fade" className='text-[#87909D] text-[18px] text-start md:text-center'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
         </div>
-        <div className=' flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-5  ' >
-          <div data-aos="fade-left" className=' md:w-[40%] md:h-full  md:order-2 '>
-            <Image
-              src={ecommerceDos}
-              alt='imagen '
-              className='rounded-2xl md:w-[100%] md:h-[100%] '
-            />
-
-          </div>
-          <div className='md:w-[60%]  h-full' >
-            <div data-aos="fade-right" className='md:flex md:items-end md:h-full '>
-              <div className=' gap-2 flex flex-col  md:justify-between md:h-[250px]  '>
-                <div className=' grid gap-1 md:grid md:gap-5'>
-                  <h1 className='md:text-[16px] text-[#E3E4E6] font-semibold tracking-[0.64px] leading-[24px]'>ECOMMERCE</h1>
-                  <p className='md:text-md lg:text-[32px]'>Ecommerce usando como base de datos Firebase y utilizando React Vite y Chakra UI Para los estilos
-                  </p>
-                </div>
-                <div className=' md:flex md:flex-col flex  flex-col gap-4 md:gap-5 md:h-auto '>
-                  <span className='span md:text-[18px] font-light md:leading-[27px]'>website design</span>
-                  <a href="" className=' border py-3 w-[160px] rounded-xl px-3 md:px-2 md:py-2 md:text-sm lg:px-3 lg:py-3 lg:text-1xl lg:bg-[#3154E2] flex justify-between '>VER TRABAJO <Image src={flecha} width={20} height={20} alt='flecha' />  </a>
-                </div>
-              </div>
+      </div>
+      <div className='flex gap-10 flex-col md:grid md:grid-cols-3 md:gap-5 md:mt-[70px]'>
+        <div data-aos="fade" className=' rounded-t-lg shadow-md border'>
+          <Image
+            src={ecommerce}
+            width='auto'
+            alt='proyect'
+            className='w-full rounded-t-lg'
+          />
+          <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
+            <span className='text-[#87909D] text-[12px]'>UI-UX DESIGN</span>
+            <p className='text-[#0B0C0C] font-semibold text-[18px]'>Product Admin Dashboard</p>
+            <p className='text-[#323433] text-[14px]'>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+            <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 '>
+              <a href="" className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
+              <Image src={arrow} width='auto' className='' />
             </div>
-          </div>
 
+          </div>
         </div>
-
-        <div className=' flex flex-col items-center gap-2 w-[300px] mx-auto md:flex-row md:w-[100%] md:gap-5 ' >
-          <div data-aos="fade-right" className=' md:w-[40%] md:h-full  md:order-1 '>
-            <Image
-              src={proyectDentist}
-              alt='imagen '
-              className='rounded-2xl md:w-[100%] md:h-[100%] '
-            />
+        <div data-aos="fade" className=' rounded-t-lg shadow-md border'>
+          <Image
+            src={ecommerceDos}
+            width='auto'
+            alt='proyect'
+            className='w-full rounded-t-lg'
+          />
+          <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
+            <span className='text-[#87909D] text-[12px]'>UI-UX DESIGN</span>
+            <p className='text-[#0B0C0C] font-semibold text-[18px]'>Product Admin Dashboard</p>
+            <p className='text-[#323433] text-[14px]'>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+            <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 '>
+              <a href="" className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
+              <Image src={arrow} width='auto' className='' />
+            </div>
 
           </div>
-          <div className='md:w-[60%] md:order-2  h-full' >
-            <section data-aos="fade-left" className='md:flex md:items-end md:h-full  '>
-              <div className=' gap-2 flex flex-col  md:justify-between md:h-[250px]  '>
-                <div className=' grid gap-1 md:grid md:gap-5'>
-                  <h1 className='md:text-[16px] text-[#E3E4E6] font-semibold tracking-[0.64px] leading-[24px]'>PAGE DENTIST</h1>
-                  <p className='md:text-md lg:text-[32px]'>Ecommerce usando como base de datos Firebase y utilizando React Vite y Chakra UI Para los estilos</p>
-                </div>
-                <div className=' md:flex md:flex-col flex  flex-col gap-4 md:gap-5'>
-                  <span className='span md:text-[18px] font-light md:leading-[27px]'>website design</span>
-                  <a href="" className=' border py-3 w-[160px] rounded-xl px-3 md:px-2 md:py-2 md:text-sm lg:px-3 lg:py-3 lg:text-1xl  flex justify-between '>VER TRABAJO <Image src={flecha} width={20} height={20} alt='flecha' />  </a>
-                </div>
-              </div>
-            </section>
+        </div>
+        <div data-aos="fade" className=' rounded-t-lg shadow-md border'>
+          <Image
+            src={proyectDentist}
+            width='auto'
+            alt='proyect'
+            className='w-full rounded-t-lg'
+          />
+          <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
+            <span className='text-[#87909D] text-[12px]'>UI-UX DESIGN</span>
+            <p className='text-[#0B0C0C] font-semibold text-[18px]'>Product Admin Dashboard</p>
+            <p className='text-[#323433] text-[14px]'>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+            <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 '>
+              <a href="" className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
+              <Image src={arrow} width='auto' className='' />
+            </div>
+
           </div>
         </div>
       </div>
-
-      <span className='text-center md:text-start  w-full mt-5 text-2xl'>Mas Proyectos</span>
-
+      <div className='flex items-center justify-center mt-[50px]'>
+        <a href="" className=' bg-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 '>More Proyects</a> 
+      </div>
     </div>
   )
 }

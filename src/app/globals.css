@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 #body {
-    background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
-    font-family: var(-workSans-font);
+    /* background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%); */
+    font-family: var(-inter-font);
     font-weight: 300;
+    background-color: #ffff;
 }
 
 .nav {
-    font-family: var(-workSans-font);
+    font-family: var(-inter-font);
     font-weight: 500;
     @apply flex items-center justify-between py-5 w-full sticky top-0 z-50
 }
 
 .item {
-    @apply relative tracking-[-1px] hover:text-white cursor-pointer
+    @apply relative tracking-[-1px] cursor-pointer
 }
 
 .item::after {
