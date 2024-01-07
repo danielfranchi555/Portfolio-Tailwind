@@ -48,7 +48,7 @@ const Proyects = () => {
 
           </div>
         </div>) : data.map((item) =>
-         <div data-aos="fade" className=' rounded-t-lg shadow-md border'>
+         <div key={item.id} data-aos="fade" className=' rounded-t-lg shadow-md border'>
           <Image
             src={item.image}
             width='auto'
