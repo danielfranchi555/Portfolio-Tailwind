@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "close-menu": "url('../../public/menu.svg')",
-        "hero": "url('../../public/Design.svg')"
+         "hero": "url('../../public/Design.svg')"
       },
       colors: {
         "nav": '#000',

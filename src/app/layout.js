@@ -4,11 +4,11 @@ import { Work_Sans } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/NavBar'
 import Hero from '@/components/Hero'
-import Proyects from '@/components/Proyects'
 import Footer from '@/components/Footer'
 import Form from '@/components/Form/Form'
 import AboutMe from '@/components/AboutMe'
 import Skills from '@/components/Skills'
+import Proyects from '@/components/proyects/Proyects'
 
 export const inter = Inter({
    subsets: ['latin'],
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             <Hero className={inter.className} />
             <Skills/>
             <Proyects />
-            {/* <AboutMe /> */}
+            <AboutMe />
             <Form />
             <Footer />
           </div>

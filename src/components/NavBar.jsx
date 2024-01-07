@@ -33,7 +33,7 @@ const NavBar = () => {
 
   return (
     <>
-     <div className={nav ? "fixed w-full top-0 z-50 bg-white bg-opacity-50 p-4" : "bg-transparent"}>
+     <div className={nav ? "fixed w-full top-0 z-50 bg-[#3154E2] bg-opacity-5  " : " fixed w-full top-0 z-50 bg-transparent"}>
        <nav id="nav" className='nav px-5 sm:px-5   md:w-[80%] md:px-0 md:mx-auto' >
       <a href="" className='text-[#3154E2] lg:text-2xl '>DFRANCHI</a>
       <input type="checkbox" id='menu' className='peer hidden' checked={isMenuOpen} onChange={toggleMenu} />
