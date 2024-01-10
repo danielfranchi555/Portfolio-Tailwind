@@ -37,8 +37,8 @@ const Skills = () => {
                     ))}
                 </div>
                 <div className='md:items-center md:flex md:justify-center'>
-                    {data.slice(-1).map((item) => (
-                        <FadeLeft className=' py-3 px-5 md:px-3 md:py-1 lg:py-3 border rounded-md shadow-md'>
+                    {data.slice(-1).map((item,index) => (
+                        <FadeLeft key={index} className=' py-3 px-5 md:px-3 md:py-1 lg:py-3 border rounded-md shadow-md'>
                             <Image src={item.image} width='auto' height='auto' />
                             <span className='text-[#000]  font-semibold md:text-[14px] lg:text-[20px] dark:text-[#fff]'>{item.title}</span>
                             <p className='text-[#323433] text-[14px] font-normal dark:text-[#fff]'>{item.description}</p>
