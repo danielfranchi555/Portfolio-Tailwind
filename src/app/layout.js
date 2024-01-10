@@ -1,19 +1,13 @@
 
 import { Inter } from 'next/font/google'
-import { Work_Sans } from 'next/font/google'
+import { Work_Sans, Quattrocento_Sans } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/NavBar'
-import Hero from '@/components/Hero'
-import Footer from '@/components/Footer'
-import Form from '@/components/Form/Form'
-import AboutMe from '@/components/AboutMe'
-import Skills from '@/components/Skills'
-import Proyects from '@/components/proyects/Proyects'
+import Provider from '@/components/Provider'
 
 export const inter = Inter({
-   subsets: ['latin'],
-   weight: ['200', '400', '300'],
-   variable: '-inter-font'
+  subsets: ['latin'],
+  weight: ['200', '400', '300'],
+  variable: '-inter-font'
 })
 
 export const workSans = Work_Sans({
@@ -22,7 +16,10 @@ export const workSans = Work_Sans({
   variable: '-workSans-font'
 })
 
-
+export const quattrocento = Quattrocento_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -34,22 +31,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body id='body' className="text-[#E3E4E6] ">
-        <div className='w-full '>
-          <div className='w-full '>
-            <NavBar />
-          </div>
-          <div className='md:max-w-[100%] mt-20 md:mt-20 w-[80%] mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
-            <Hero className={inter.className} />
-            <Skills/>
-            <Proyects />
-            <AboutMe />
-            <Form />
-            <Footer />
-          </div>
+      <body id='body' className={inter.className}>
+        <Provider>
           {children}
-        </div>
-
+        </Provider>
       </body>
     </html>
   )

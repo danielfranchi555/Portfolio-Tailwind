@@ -1,9 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
-import 'aos/dist/aos.css'
 import { data } from './data'
-import Aos from 'aos'
+import { Federant } from 'next/font/google'
+import Fade from '../fade/Fade'
+import Link from 'next/link'
 const Proyects = () => {
 
   const [more, setMore] = useState(false)
@@ -14,62 +15,61 @@ const Proyects = () => {
     setMostrarTres(!mostrarTres)
   }
 
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
+
 
 
   return (
     <div id='proyectos' className='flex flex-col gap-5 mt-[190px]'>
       <div className='md:flex md:flex-col md:items-center md:justify-center md:gap-5'>
-        <h4 data-aos="fade" className='text-[#0B0C0C] font-bold text-3xl lg:text-[40px]'>Portfolio</h4>
+        <h4 className='text-[#0B0C0C] font-bold text-3xl lg:text-[40px] dark:text-[#fff]'>Portfolio</h4>
         <div className='md:max-w-[550px] text-center'>
-          <p data-aos="fade" className='text-[#323433] text-[18px] text-start md:text-center'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+          <p className='text-[#323433] text-[18px] text-start md:text-center dark:text-[#fff]'>Explora mi portfolio para descubrir una muestra de mis proyectos y habilidades en diseño y desarrollo</p>
         </div>
       </div>
       <div className='flex gap-10 flex-col md:grid md:grid-cols-3 md:gap-5 md:mt-[70px]'>
-        {mostrarTres ? data.slice(0, 3).map((item) => 
-        <div key={item.id} data-aos="fade" className=' rounded-t-lg shadow-md border'>
-          <Image
-            src={item.image}
-            width='auto'
-            height='auto'
-            alt='proyect'
-            className='w-full rounded-t-lg'
-          />
-          <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
-            <span className='text-[#87909D] text-[12px]'>{item.name}</span>
-            <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
-            <p className='text-[#323433] text-[14px]'>{item.description}</p>
-            <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
-              <a href='' target='_blank' className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
-              <Image src={item.arrow} width='30' height='0' className='' />
+        {mostrarTres ? data.slice(0, 3).map((item) =>
+          <Fade key={item.id} className=' rounded-t-lg shadow-md border dark:border-none dark:bg-blue-400'>
+            <Image
+              src={item.image}
+              width='auto'
+              height='auto'
+              alt='proyect'
+              className='w-full rounded-t-lg'
+            />
+            <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
+              <span className='text-[#87909D] text-[12px]'>{item.name}</span>
+              <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
+              <p className='text-[#323433] text-[14px]'>{item.description}</p>
+              <Link target='_blank' href={item.link}>
+                <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
+                  <span className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</span>
+                  <Image src={item.arrow} width='30' height='0' className='' />
+                </div>
+              </Link>
             </div>
+          </Fade>) : data.map((item) =>
+            <Fade key={item.id} className=' rounded-t-lg shadow-md border'>
+              <Image
+                src={item.image}
+                width='auto'
+                height='auto'
+                alt='proyect'
+                className='w-full rounded-t-lg'
+              />
+              <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
+                <span className='text-[#87909D] text-[12px]'>{item.name}</span>
+                <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
+                <p className='text-[#323433] text-[14px]'>{item.description}</p>
+                <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
+                  <a href='' target='_blank' className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
+                  <Image src={item.arrow} width='30' height='0' className='' />
+                </div>
 
-          </div>
-        </div>) : data.map((item) =>
-         <div key={item.id} data-aos="fade" className=' rounded-t-lg shadow-md border'>
-          <Image
-            src={item.image}
-            width='auto'
-            height='auto'
-            alt='proyect'
-            className='w-full rounded-t-lg'
-          /> 
-          <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
-            <span className='text-[#87909D] text-[12px]'>{item.name}</span>
-            <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
-            <p className='text-[#323433] text-[14px]'>{item.description}</p>
-            <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
-              <a href='' target='_blank' className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
-              <Image src={item.arrow} width='30' height='0' className='' />
-            </div>
-
-          </div>
-        </div>)}
+              </div>
+            </Fade>)}
       </div>
       <div className='flex items-center justify-center mt-[50px]'>
-        <button button className=' bg-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 ' onClick={toogle}>{mostrarTres ? <span>More Proyects</span> : <span>Close</span>}</button>
+        <button button className=' bg-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 text-[#fff] ' onClick={toogle}>{mostrarTres ? <span>More Proyects</span> : <span>Close</span>}</button>
       </div>
     </div>
   )

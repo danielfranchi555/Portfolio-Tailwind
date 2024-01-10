@@ -34,8 +34,8 @@ const Form = () => {
         <div className=' py-5 mt-20 w-full md:w-[100%] mx-auto flex flex-col gap-5 lg:flex lg:flex-col lg:gap-20 '>
             <div className='flex flex-col gap-5 lg:flex lg:flex-col lg:items-center lg:gap-5 '>
                 <span className='border border-[#3154E2] text-[#3154E2] px-4 rounded-lg inline-block max-w-max '>Contact</span>
-                <h3 id='contacto' className=' text-4xl font-semibold text-[#0B0C0C] '>Hablemos sobre tu <span className='text-[#3154E2] font-semibold'>Proyecto</span></h3>
-                <p className='md:text-md text-start text-[#323433] text-[16px]'>Creemos algo nuevo, diferente y más significativo, o hagamos que las cosas sean más visuales o conceptuales</p>
+                <h3 id='contacto' className=' text-4xl font-semibold text-[#0B0C0C] dark:text-[#fff]'>Hablemos sobre tu <span className='text-[#3154E2] font-semibold'>Proyecto</span></h3>
+                <p className='md:text-md text-start text-[#323433] text-[16px] dark:text-[#fff]'>Creemos algo nuevo, diferente y más significativo, o hagamos que las cosas sean más visuales o conceptuales</p>
             </div>
             <div className=' flex flex-col  gap-10 lg:grid lg:grid-cols-2 ' >
                 <div className=' flex flex-col  gap-10 lg:flex lg:flex-col lg:justify-between '>
@@ -47,8 +47,8 @@ const Form = () => {
                                 className='lg:w-[60px]'
                             />
                             <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='text-[#92929D]'>Call me</p>
-                                <p className='text-[#11142D]'>+8801613968687</p>
+                                <p className='dark:text-[#fff] text-[#92929D]'>Call me</p>
+                                <p className='dark:text-[#fff] text-[#11142D]'>+8801613968687</p>
                             </div>
                         </div>
                         <div className='lg:flex '>
@@ -60,8 +60,8 @@ const Form = () => {
 
                             />
                             <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='text-[#92929D]'>Email</p>
-                                <p className='text-[#11142D]'>danielfranchi3@gmail.com</p>
+                                <p className='dark:text-[#fff] text-[#92929D]'>Email</p>
+                                <p className='dark:text-[#fff] text-[#11142D]'>danielfranchi3@gmail.com</p>
                             </div>
                         </div>
                         <div className='lg:flex '>
@@ -73,8 +73,8 @@ const Form = () => {
 
                             />
                             <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='text-[#92929D]'>Ubicacion</p>
-                                <p className='text-[#11142D]'>Cordoba, Argentina</p>
+                                <p className='dark:text-[#fff] text-[#92929D]'>Ubicacion</p>
+                                <p className='dark:text-[#fff] text-[#11142D]'>Cordoba, Argentina</p>
                             </div>
                         </div>
                         <div className='lg:flex '>
@@ -86,8 +86,8 @@ const Form = () => {
 
                             />
                             <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='text-[#92929D]'>Linkedin</p>
-                                <p className='text-[#11142D]'>https://www.linkedin.com/in/danielfranchijs/</p>
+                                <p className='dark:text-[#fff] text-[#92929D]'>Linkedin</p>
+                                <p className='dark:text-[#fff] text-[#11142D]'>https://www.linkedin.com/in/danielfranchijs/</p>
                             </div>
                         </div>
                 </div>

@@ -1,8 +1,28 @@
+import AboutMe from "@/components/AboutMe";
+import Footer from "@/components/Footer";
+import Form from "@/components/Form/Form";
+import Hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Proyects from "@/components/proyects/Proyects";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
+ 
   return (
-    <main className="">
-      
+    <main className='w-full'>
+          <div className='w-full '>
+            <NavBar />
+          </div>
+          <div className='md:max-w-[100%] mt-20 md:mt-20 w-[80%] mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
+            <Hero />
+            <Skills/>
+            <Proyects />
+            <AboutMe />
+            <Form/>
+            <Footer />
+          </div>
+        <ThemeSwitcher/>
     </main>
   )
 }

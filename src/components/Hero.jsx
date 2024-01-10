@@ -13,70 +13,35 @@ import svgThree from '../../public/svg-3.svg'
 import svgFour from '../../public/svg-firebase-2 1.png'
 import flecha from '../../public/flecha.svg'
 
-
-import { motion, useAnimation, useInView } from 'framer-motion'
-import { MotionA, MotionDiv, MotionH2, MotionP } from './MotionDiv'
-import { fadeIn } from '@/Utils/MotionTransitions'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import FadeLeft from './fade/FadeLeft'
+import FadeRight from './fade/FadeRight'
 
 
 const Hero = () => {
 
 
-
-  const textVariants = {
-    initial: {
-      x: -500,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-      }
-    }
-  }
-
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true })
-  const mainControls = useAnimation()
-
-  useEffect(() => {
-    if (inView) {
-      mainControls.start("visible")
-    }
-  }, [inView])
-
-  useEffect(() => {
-    Aos.init({ duration: 2000 })
-  }, [])
-
-
-
   return (
-    <header className=' hero text-center items-center mt-10 lg:mt-[180px] '>
+    <header className='  hero text-center items-center mt-10 lg:mt-[180px] '>
       <div className='flex items-center flex-col md:justify-bettween md:flex-row '>
-        <div data-aos="fade-right" className='hidden  md:flex md:flex-col md:gap-5 md:text-left md:w-[50%] lg:w-[60%] lg:flex lg:flex-col lg:gap-5 ' >
+        <FadeRight  className='hidden  md:flex md:flex-col md:gap-5 md:text-left md:w-[50%] lg:w-[60%] lg:flex lg:flex-col lg:gap-5 ' >
           <div>
-            <span className=' border-[1px] border-[#3154E2] rounded-xl text-[20px] text-[#3154E2] px-4'>Welcome</span>
+            <span className=' border-[1px] border-[#3154E2] rounded-xl text-[20px] text-[#3154E2] px-4 dark:text-white'>Welcome</span>
           </div>
           <div className='lg:max-w-[700px]  lg:py-2 lg:gap-5 lg:flex  lg:flex-col' >
-            <h1 className='md:text-3xl lg:text-[50px] leading-[60px] font-semibold   text-[#2B2B2B]'>Experiencia en <span className='text-[#3154E2] font-bold'>Desarrollo</span></h1>
-            <h2 className='md:text-3xl lg:text-[50px] leading-[60px] font-semibold text-[#2B2B2B]'> <span className='text-[#3154E2] font-bold'> Web </span>Developer</h2>
+            <h1 className='md:text-3xl lg:text-[50px] leading-[60px] font-semibold dark:text-[#fff]  text-[#2B2B2B]'>Experiencia en <span className='text-[#3154E2] font-bold'>Desarrollo</span></h1>
+            <h2 className='md:text-3xl lg:text-[50px] leading-[60px] font-semibold dark:text-[#fff] text-[#2B2B2B]'> <span className='text-[#3154E2] font-bold'> Web </span>Developer</h2>
           </div>
           <div className='md:max-w-[250px] lg:max-w-[510px]'>
-            <p id='parrafo' className=' md:text-xs lg:text-[16px] text-[#323433] md:text-[16px] lg:leading-[24px]'>Soy un desarrollador front-end con un enfoque dedicado en transformar ideas creativas en experiencias digitales asombrosas
+            <p id='parrafo' className=' md:text-xs lg:text-[16px] text-[#323433] md:text-[16px] dark:text-[#fff] lg:leading-[24px]'>Soy un desarrollador front-end con un enfoque dedicado en transformar ideas creativas en experiencias digitales asombrosas
             </p>
           </div>
-          <a href="" className='bg-[#3154E2] px-5 py-3 md:block max-w-max inline-block md:px-2 md:py-2 md:text-center md:rounded-lg lg:px-3 lg:py-3'>Contactame</a>
+          <a href="" className='bg-[#3154E2] px-5 py-3 md:block max-w-max inline-block md:px-2 md:py-2 md:text-center md:rounded-lg lg:px-3 lg:py-3 text-[#fff]'>Contactame</a>
 
-        </div>
+        </FadeRight>
         <h1 className='text-4xl text-[#3154E2] md:hidden'>Daniel Franchi</h1>
-        <a href="" className='bg-[#3154E2] mt-5 w-[250px] py-3 rounded-md md:hidden'>Contactame</a>
+        <a href="" className='bg-[#3154E2] mt-5 w-[250px] py-3 rounded-md md:hidden '>Contactame</a>
         <a href="" className='border mt-5 w-[250px] py-3 text-[#000] rounded-md hover:bg-slate-300 md:hidden'>Descargar CV</a>
-        <div data-aos="fade-left"
+        <FadeLeft 
           className='md:w-[50%] lg:w-[40%] flex '>
           <div className='w-[100%]'>
             <Image
@@ -113,7 +78,7 @@ const Hero = () => {
             </div>
 
           </div>
-        </div>
+        </FadeLeft>
       </div>
       <div className='flex items-center justify-center  mt-10'>
         <Image
