@@ -1,6 +1,5 @@
 
-import { Inter } from 'next/font/google'
-import { Work_Sans, Quattrocento_Sans } from 'next/font/google'
+import { Inter,Work_Sans } from 'next/font/google'
 import './globals.css'
 import Provider from '@/components/Provider'
 
@@ -10,16 +9,12 @@ export const inter = Inter({
   variable: '-inter-font'
 })
 
-export const workSans = Work_Sans({
-  weight: ['200', '400', '300'],
+export const work = Work_Sans({
   subsets: ['latin'],
-  variable: '-workSans-font'
+  weight: ['200', '400', '300'],
+  variable: '-inter-font'
 })
 
-export const quattrocento = Quattrocento_Sans({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-})
 
 export const metadata = {
   title: 'Create Next App',

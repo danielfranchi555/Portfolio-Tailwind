@@ -23,7 +23,7 @@ const Proyects = () => {
       <div className='md:flex md:flex-col md:items-center md:justify-center md:gap-5'>
         <h4 className='text-[#0B0C0C] font-bold text-3xl lg:text-[40px] dark:text-[#fff]'>Portfolio</h4>
         <div className='md:max-w-[550px] text-center'>
-          <p className='text-[#323433] text-[18px] text-start md:text-center dark:text-[#fff]'>Explora mi portfolio para descubrir una muestra de mis proyectos y habilidades en diseño y desarrollo</p>
+          <p className='text-[#323433] text-[18px] text-start md:text-center dark:text-[#fff]'>Explora mi portfolio para descubrir una muestra de mis proyectos y habilidades en desarrollo</p>
         </div>
       </div>
       <div className='flex gap-10 flex-col md:grid md:grid-cols-3 md:gap-5 md:mt-[70px]'>

@@ -4,18 +4,18 @@ import iconThree from '../../../public/diamond-outline.svg'
 
 export const data = [
     {
-        title: 'Diseño Visual',
-        description: "Diseño de interfaces de usuario modernas",
+        title: 'Desarrollo Responsivo',
+        description: "Sitios web adaptados a diferentes tamaños de pantalla",
         image: iconOne,
     },
     {
-        title: 'UX research',
-        description: "Diseño de interfaces de usuario modernas",
+        title: 'Optimizacion de SEO',
+        description: "Mejorar la visibildad de tu sitio en los resultados de busqueda",
         image: iconTwo,
     },
     {
-        title: 'Design prototype',
-        description: "Diseño de interfaces de usuario modernas",
+        title: 'Diseño web atractivo',
+        description: "Diseño web que realza la visibilidad de tu sitio en búsquedas",
         image: iconThree,
     },
 ]

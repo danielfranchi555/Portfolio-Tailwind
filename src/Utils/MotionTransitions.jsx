@@ -80,13 +80,13 @@ export const fadeLeft = () => {
 export const fadeUp = () => {
   return {
     hidden: {
-      y: -80,  // Cambiado de 'y' a '-y'
+      y: -80,
       opacity: 0,
       transition: {
         type: "tween",
-        duration: 0.1,
+        duration: 0.8,  // Aumentado de 0.1 a 0.8
         delay: 0.1,
-        ease: [0.25, 0.6, 0.3, 0.8],
+        ease: [0.45, 0.10, 0.3, 0.8],
       },
     },
     visible: {
@@ -94,13 +94,14 @@ export const fadeUp = () => {
       opacity: 1,
       transition: {
         type: "tween",
-        duration: 1.3,
+        duration: 1.5,  // Aumentado de 1.3 a 1.5
         delay: 0.1,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: [0.45, 0.25, 0.25, 0.75],
       },
     },
   };
 };
+
 
 export const fade = () => {
   return {

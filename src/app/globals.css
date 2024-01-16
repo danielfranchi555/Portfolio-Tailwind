@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#body {
-    font-weight: 300;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .nav {
@@ -41,38 +42,11 @@ html {
     scroll-behavior: smooth;
 }
 
-.title {
-    font-family: var(-workSans-font);
-    font-weight: 600;
-    letter-spacing: 4px;
-    /* Ajusta este valor según tus necesidades */
-
-}
-
-.span {
-    font-family: var(-workSans-font);
-    font-weight: 300;
-    color: E3E4E6;
-    letter-spacing: 4px;
-    /* Ajusta este valor según tus necesidades */
-
-}
 
 
-#parrafo {
-    font-family: var(-inter-font);
-    font-weight: 400;
-    font-kerning: none;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    text-transform: capitalize;
-    font-feature-settings: 'calt' off;
-    font-size: 16px;
 
 
-}
+
 
 *{
     @apply transition-colors duration-100
