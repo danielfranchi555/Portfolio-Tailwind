@@ -29,13 +29,16 @@ const Proyects = () => {
       <div className='flex gap-10 flex-col md:grid md:grid-cols-3 md:gap-5 md:mt-[70px]'>
         {mostrarTres ? data.slice(0, 3).map((item) =>
           <Fade key={item.id} className=' rounded-t-lg shadow-md border dark:border-none dark:bg-blue-400'>
-            <Image
-              src={item.image}
-              width='auto'
-              height='auto'
-              alt='proyect'
-              className='w-full rounded-t-lg'
-            />
+            <div className='h-[300px]'>
+              <Image
+                src={item.image}
+                width='auto'
+                height='auto'
+                alt='proyect'
+                className='w-full h-full rounded-t-lg object-center'
+              />
+            </div>
+
             <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
               <span className='text-[#87909D] text-[12px]'>{item.name}</span>
               <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>

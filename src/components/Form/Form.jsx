@@ -10,7 +10,7 @@ import Image from 'next/image'
 const Form = () => {
 
     const { register, handleSubmit, reset,
-        formState: { errors } } = useForm()
+    formState: { errors } } = useForm()
     console.log(errors)
 
     const submit = handleSubmit(async (data) => {
