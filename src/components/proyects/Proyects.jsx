@@ -42,11 +42,11 @@ const Proyects = () => {
             <div className='px-5 py-3 flex flex-col gap-2 bg-[#fff] '>
               <span className='text-[#87909D] text-[12px]'>{item.name}</span>
               <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
-              <p className='text-[#323433] text-[14px]'>{item.description}</p>
+              <p className='text-[#323433] text-[14px] h-[70px]'>{item.description}</p>
               <Link target='_blank' href={item.link}>
-                <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
-                  <span className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</span>
-                  <Image src={item.arrow} width='30' height='0' className='' />
+                <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4  cursor-pointer'>
+                  <span className='inline-block max-w-max text-[#3154E2] text-[16px] cursor-pointer ' >Case Study</span>
+                  <Image src={item.arrow} width='30' height='0' className='cursor-pointer' />
                 </div>
               </Link>
             </div>
@@ -64,7 +64,7 @@ const Proyects = () => {
                 <p className='text-[#0B0C0C] font-semibold text-[18px]'>{item.title}</p>
                 <p className='text-[#323433] text-[14px]'>{item.description}</p>
                 <div className='border border-[#3154E2] rounded-md px-5 py-3 flex max-w-max  items-center gap-4 '>
-                  <a href='' target='_blank' className='inline-block max-w-max text-[#3154E2] text-[16px] ' >Case Study</a>
+                  <a href='' target='_blank' className='inline-block max-w-max text-[#3154E2] text-[16px] cursor-pointer ' >Case Study</a>
                   <Image src={item.arrow} width='30' height='0' className='' />
                 </div>
 
@@ -72,7 +72,7 @@ const Proyects = () => {
             </Fade>)}
       </div>
       <div className='flex items-center justify-center mt-[50px]'>
-        <button button className=' bg-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 text-[#fff] ' onClick={toogle}>{mostrarTres ? <span>More Proyects</span> : <span>Close</span>}</button>
+        {/* <button button className=' bg-[#3154E2] rounded-md px-5 py-3 flex max-w-max gap-4 text-[#fff] ' onClick={toogle}>{mostrarTres ? <span>More Proyects</span> : <span>Close</span>}</button> */}
       </div>
     </div>
   )

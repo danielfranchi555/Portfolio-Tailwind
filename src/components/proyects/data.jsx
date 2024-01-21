@@ -14,7 +14,7 @@ export const data = [
       image: proyectSix,
       name: 'Landing Page',
       title: 'Agency Marketing',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
+      description: 'Landing page desarrollada con NextJs, tailwind css para la customizacion y Framer motion para la implemetacion de animaciones',
       arrow: arrow,
       link: "https://agenone-zk4d.vercel.app/"
    },
@@ -22,47 +22,18 @@ export const data = [
       id: 2,
       image: proyectoFive,
       name: 'Landing Page',
-      title: 'Page Dentist',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
+      title: 'Gym24',
+      description: 'Landing Page utilizando Nextjs, tailwind css para los estilos y Shadcn para la creacion de algunos componentes ',
       arrow: arrow,
       link: "https://gym-proyect-lilac.vercel.app/"
 
    },
    {
       id: 3,
-      image: proyectFour,
+      image: proyectThree,
       name: 'App',
       title: 'Tienda Online',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
-      arrow: arrow,
-      link: "https://agency-marketing-f6z7.vercel.app/"
-   },
-   {
-      id: 4,
-      image: proyectOne,
-      name: 'ecommerce',
-      title: 'Agency Marketing',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
-      arrow: arrow,
-      link: "https://agency-marketing-f6z7.vercel.app/"
-
-   },
-   {
-      id: 5,
-      image: proyectOne,
-      name: 'proyectOne',
-      title: 'Agency Marketing',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
-      arrow: arrow,
-      link: "https://agency-marketing-f6z7.vercel.app/"
-
-   },
-   {
-      id: 6,
-      image: proyectOne,
-      name: 'ecommerce',
-      title: 'Agency Marketing',
-      description: 'ivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.',
+      description: 'Tienda online utilizando Vite para la creacion del proyecto, ChakraUi para los estilos y Google Sheets como base de datos ',
       arrow: arrow,
       link: "https://agency-marketing-f6z7.vercel.app/"
    },

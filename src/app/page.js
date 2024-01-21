@@ -15,7 +15,7 @@ export default function Home() {
           <div className='w-full '>
             <NavBar />
           </div>
-          <div className=' mt-20 md:mt-20 w-[90%] md:w-[80%] mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
+          <div className=' mt-20 md:mt-10 w-[90%] md:w-[80%] mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
             <Hero />
             <Arrow/>
             <Skills/>

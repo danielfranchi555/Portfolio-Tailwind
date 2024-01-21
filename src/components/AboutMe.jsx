@@ -11,7 +11,7 @@ const AboutMe = () => {
 
   
     return (
-        <div className=' w-[300px] mx-auto flex flex-col items-center  justify-center gap-5  mt-20 md:w-full md:flex lg:grid lg:grid-cols-2 md:mt-40  '>
+        <div id='about' className=' w-[300px] mx-auto flex flex-col items-center  justify-center gap-5  mt-20 md:w-full md:flex lg:grid lg:grid-cols-2 md:mt-40  '>
             <FadeRight className=' text-center flex flex-col gap-4 md:items-start'>
                 <h3 className='text-3xl md:text-4xl lg:text-[40px] font-bold text-[#0B0C0C] dark:text-[#fff]'>ACERCA DE MI</h3>
                 <p  className='text-1xl md:text-1xl md:text-start text-[#323433] dark:text-[#fff] text-[18px]'>

@@ -19,6 +19,7 @@ const Form = () => {
         const response = await fetch('/api/send/', {
             method: 'POST',
             body: JSON.stringify(data)
+            
         }
         )
 

@@ -22,10 +22,10 @@ const Hero = () => {
 
 
   return (
-    <header className='text-center flex justify-center    flex-col md:grid md:grid-cols-2 w-full items-center mt-10 lg:mt-[100px] '>
+    <header id='inicio' className='text-center flex justify-center    flex-col md:grid md:grid-cols-2 w-full items-center mt-10 lg:mt-[10px] '>
       <h1 className='text-4xl text-[#3154E2] md:hidden'>Daniel Franchi</h1>
-      <a href="" className='bg-[hsl(228,75%,54%)] mt-5 w-[250px] py-3 rounded-md md:hidden '>Contactame</a>
-      <a href="" className='border mt-5 w-[250px] py-3 text-[#000] rounded-md hover:bg-slate-300 md:hidden'>Descargar CV</a>
+      <a href="#contacto" className='bg-[hsl(228,75%,54%)] mt-5 w-[250px] py-3 rounded-md md:hidden '>Contactame</a>
+      {/* <a href="" className='border mt-5 w-[250px] py-3 text-[#000] rounded-md hover:bg-slate-300 md:hidden'>Descargar CV</a> */}
       <FadeRight className='hidden  md:flex md:flex-col md:gap-4 md:text-left  lg:flex lg:flex-col lg:gap-5 ' >
         <span className=' max-w-max border-[1px] border-[#3154E2] rounded-xl text-[20px] text-[#3154E2] px-4 dark:text-white'>Bienvenido/a</span>
         <h1 className='md:text-3xl lg:text-5xl   font-semibold lg:text-[58px] '>
