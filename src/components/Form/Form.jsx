@@ -1,137 +1,84 @@
 "use client"
-import { useForm } from 'react-hook-form'
-import iconOne from '../../../public/Group9042.svg'
-import iconTwo from '../../../public/Group9043.svg'
-import iconThree from '../../../public/Group9044.svg'
-import iconFour from '../../../public/linkedin.svg'
-
-
+import { useForm } from "react-hook-form"
+import linkedin from '../../../public/linkedin-icon.svg'
+import github from '../../../public/github-icon.svg'
 import Image from 'next/image'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
+import { AlertDemo } from './Alert'
+import { userSchema } from './Validations'
+import { zodResolver } from "@hookform/resolvers/zod"
+
+
 const Form = () => {
 
-    const { register, handleSubmit, reset,
-    formState: { errors } } = useForm()
-    console.log(errors)
+    const form = useRef();
 
-    const submit = handleSubmit(async (data) => {
-        console.log(data.nombre)
-
-        const response = await fetch('/api/send/', {
-            method: 'POST',
-            body: JSON.stringify(data)
-            
-        }
-        )
-
-        if (response.status === 200) {
-            reset()
-            alert('formulario validado correctamente')
-        } else (
-            alert('error')
-        )
+    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+        resolver: zodResolver(userSchema),
     })
 
+    const [enviado,setEnviado] = useState(false)
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs.sendForm('service_ehzn3rl','template_nuhaq17', form.current,'PzpG3CtC2nyY_tksV')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //             form.current.reset()
+    //             return (
+    //                 <AlertDemo/>
+    //             )
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    // };
+
+    const submit = (data) => {
+
+        emailjs.sendForm('service_ehzn3rl', 'template_nuhaq17', form.current, 'PzpG3CtC2nyY_tksV')
+            .then((result) => {
+                console.log(result.text);
+                form.current.reset()
+                setEnviado(true)
+            }, (error) => {
+                console.log(error.text);
+            });
+        console.log(data)
+    }
+
+
     return (
-        <div className=' py-5 mt-20 w-full md:w-[100%] mx-auto flex flex-col gap-5 lg:flex lg:flex-col lg:gap-20 '>
-            <div className='flex flex-col gap-5 lg:flex lg:flex-col lg:items-center lg:gap-5 '>
-                <span className='border border-[#3154E2] text-[#3154E2] px-4 rounded-lg inline-block max-w-max '>Contact</span>
-                <h3 id='contacto' className=' text-4xl font-semibold text-[#0B0C0C] dark:text-[#fff]'>Hablemos sobre tu <span className='text-[#3154E2] font-semibold'>Proyecto</span></h3>
-                <p className='md:text-md text-start text-[#323433] text-[16px] dark:text-[#fff]'>Creemos algo nuevo, diferente y más significativo, o hagamos que las cosas sean más visuales o conceptuales</p>
-            </div>
+        <div className='  mt-20 w-full md:w-[100%] mx-auto flex flex-col gap-5 lg:flex lg:flex-col lg:gap-20 border-t py-20'>
             <div className=' flex flex-col  gap-10 lg:grid lg:grid-cols-2 ' >
-                <div className=' flex flex-col  gap-10 lg:flex lg:flex-col lg:justify-between '>
-                        <div className='lg:flex '>
-                            <Image
-                                src={iconOne}
-                                width={30}
-                                alt='icon'
-                                className='lg:w-[60px]'
-                            />
-                            <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='dark:text-[#fff] text-[#92929D]'>Call me</p>
-                                <p className='dark:text-[#fff] text-[#11142D]'>+8801613968687</p>
-                            </div>
-                        </div>
-                        <div className='lg:flex '>
-                            <Image
-                                src={iconTwo}
-                                width={30}
-                                alt='icon'
-                                className='lg:w-[60px]'
+                <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4'>
+                        <h3 className='text-[#ffff] lg:text-[66px]'>Let’s connect</h3>
+                        <p className='text-[#FFFF]'>Say hello at danielfranchi3@gmail.com</p>
+                        <p className='text-[#FFFF]'>For more info, here is my resume</p>
+                    </div>
 
-                            />
-                            <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='dark:text-[#fff] text-[#92929D]'>Email</p>
-                                <p className='dark:text-[#fff] text-[#11142D]'>danielfranchi3@gmail.com</p>
-                            </div>
-                        </div>
-                        <div className='lg:flex '>
-                            <Image
-                                src={iconThree}
-                                width={30}
-                                alt='icon'
-                                className='lg:w-[60px]'
-
-                            />
-                            <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='dark:text-[#fff] text-[#92929D]'>Ubicacion</p>
-                                <p className='dark:text-[#fff] text-[#11142D]'>Cordoba, Argentina</p>
-                            </div>
-                        </div>
-                        <div className='lg:flex '>
-                            <Image
-                                src={iconFour}
-                                width={30}
-                                alt='icon'
-                                className='lg:w-[60px]'
-
-                            />
-                            <div className='lg:flex lg:flex-col lg:px-2 lg:justify-between'>
-                                <p className='dark:text-[#fff] text-[#92929D]'>Linkedin</p>
-                                <p className='dark:text-[#fff] text-[#11142D]'>https://www.linkedin.com/in/danielfranchijs/</p>
-                            </div>
-                        </div>
+                    <div className='flex items-center gap-5'>
+                        <Image src={linkedin} />
+                        <Image src={github} />
+                    </div>
                 </div>
 
                 <div className='h-[100%]  w-[100%]  md:w-[100%]  '>
-                    <form action="" onSubmit={submit} className='flex flex-col w-[100%] mx-auto gap-4'>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="email" className='text-sm text-[#92929D] '>Name/Surname</label>
-                            <input
-                                type="text"
-                                {...register("nombre", {
-                                    required: { value: true, message: 'Este campo es requerido', },
-                                    minLength: { value: 2, message: 'Debe tener al menos 2 caracteres' },
-                                    maxLength: { value: 20, message: 'Debe tener menos de 20 caracteres' }
-                                })}
-                                className='border text-black border-gray-300 shadow-lg rounded-md px-1 py-2 focus:outline-none focus:border-[#3154E2] focus:ring focus:ring-[#3154E2]' />
-                            {errors.nombre && <span className='text-red-400 text-sm'>{errors.nombre.message}</span>}
-                        </div>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="email" className='text-sm text-[#92929D] '>Email</label>
-                            <input type="text"  {...register("email", {
-                                required: { value: true, message: 'Este campo es requerido' },
-                                pattern: { value: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/, message: 'correo no valido' }
-                            })}
-                                className='border border-gray-300 shadow-lg rounded-md px-1 py-2 focus:outline-none focus:border-[#3154E2] focus:ring focus:ring-[#3154E2]' />
-                            {errors.email && <span className='text-red-400 text-sm'>{errors.email.message}</span>}
-                        </div>
-
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="mensaje" className='text-sm text-[#92929D]'>Mensaje</label>
-                            <textarea cols="5"  {...register("mensaje", {
-                                required: { value: true, message: 'Este campo es requerido' }
-                            })}
-                                className='border rounded-md shadow-lg px-1 border-gray-300 py-2 focus:outline-none focus:border-[#3154E2] focus:ring focus:ring-[#3154E2] ' rows="10"></textarea>
-                            {errors.mensaje && <span className='text-red-400 text-sm'>{errors.mensaje.message}</span>}
-                        </div>
-                        <div className='w-full flex items-end'>
-                            <button href="" type='submit' className='border w-full text-center py-2 rounded-md'>Enviar</button>
-                        </div>
+                    <form ref={form} onSubmit={handleSubmit(submit)} className='flex flex-col'>
+                        <label className='text-white py-4'>Name</label>
+                        <input id='name' className='rounded-md px-3 py-2 bg-[#1A1A1A] text-white' type="text" name="user_name" {...register("name")} />
+                        {errors.name?.message && <p className="text-red-400">{errors.name?.message}</p>}
+                        <label className='text-white py-4'>Email</label>
+                        <input id='email' className='rounded-md px-3 py-2 bg-[#1A1A1A] text-white' type="email" name="user_email" {...register("email")} />
+                        {errors.email?.message && <p className="text-red-400">{errors.email?.message}</p>}
+                        <label className='text-white py-4 '>Message</label>
+                        <textarea id='message' className='mb-5 px-2 flex justify-start items-start w-full h-32 bg-[#1A1A1A] text-white' name="message" {...register("message")} />
+                        {enviado? <AlertDemo/>: <input className='rounded-md bg-[#D3E97A] py-3 cursor-pointer' type="submit" value="Send" />}
                     </form>
                 </div>
             </div>
-
 
         </div>
     )

@@ -21,7 +21,9 @@ const FadeLeft = ({ children,className }) => {
 
 
     return (
-            <motion.div ref={ref} variants={fadeInFromRight()}
+                <motion.div 
+                ref={ref}
+                variants={fadeInFromRight()}
                 initial="hidden"
                 animate={mainControls}
                 exit="hidden"
@@ -30,6 +32,8 @@ const FadeLeft = ({ children,className }) => {
                 {children}
             </motion.div>
 
+
+        
 
     )
 }

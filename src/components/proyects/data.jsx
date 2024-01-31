@@ -16,6 +16,8 @@ export const data = [
       title: 'Agency Marketing',
       description: 'Landing page desarrollada con NextJs, tailwind css para la customizacion y Framer motion para la implemetacion de animaciones',
       arrow: arrow,
+      year:'2023',
+      role:'Frontend developer',
       link: "https://agenone-zk4d.vercel.app/"
    },
    {
@@ -25,6 +27,8 @@ export const data = [
       title: 'Gym24',
       description: 'Landing Page utilizando Nextjs, tailwind css para los estilos y Shadcn para la creacion de algunos componentes ',
       arrow: arrow,
+      year:'2024',
+      role:'Frontend developer',
       link: "https://gym-proyect-lilac.vercel.app/"
 
    },
@@ -35,6 +39,8 @@ export const data = [
       title: 'Tienda Online',
       description: 'Tienda online utilizando Vite para la creacion del proyecto, ChakraUi para los estilos y Google Sheets como base de datos ',
       arrow: arrow,
+      year:'2024',
+      role:'Frontend developer',
       link: "https://agency-marketing-f6z7.vercel.app/"
    },
 

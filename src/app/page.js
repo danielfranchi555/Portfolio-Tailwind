@@ -11,11 +11,11 @@ import Skills from "@/components/skills/Skills";
 export default function Home() {
  
   return (
-    <main className='w-full '>
+    <main className='w-full bg-[#0A0A0A] '>
           <div className='w-full '>
             <NavBar />
           </div>
-          <div className=' mt-20 md:mt-10 w-[90%] md:w-[80%] mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
+          <div className=' mt-0 md:mt-0 w-[90%] md:max-w-screen-xl mx-auto overflow-hidden  md:overflow-hidden lg:overflow-visible '>
             <Hero />
             <Arrow/>
             <Skills/>

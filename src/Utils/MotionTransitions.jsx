@@ -1,7 +1,7 @@
 export const fadeIn = () =>{
   return {
       hidden: {
-          y: 80,
+          y: -30,
           opacity: 0,
           x:0,
           transition: {
@@ -36,7 +36,7 @@ export const fadeInFromRight = () => {
         type: "tween",
         duration: 0.1,
         delay: 0.1,
-        ease: [0.25, 0.6, 0.3, 0.8],
+        ease: [0.55, 0.36, 0.3, 0.8],
       },
     },
     visible: {
@@ -59,7 +59,7 @@ export const fadeLeft = () => {
       opacity: 0,
       transition: {
         type: "tween",
-        duration: 0.1,
+        duration: 0.5,
         delay: 0.1,
         ease: [0.25, 0.6, 0.3, 0.8],
       },
@@ -71,7 +71,7 @@ export const fadeLeft = () => {
         type: "tween",
         duration: 1.3,
         delay: 0.1,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: [0.55, 0.25, 0.25, 0.75],
       },
     },
   };
@@ -118,9 +118,9 @@ export const fade = () => {
       opacity: 1,
       transition: {
         type: "tween",
-        duration: 1.3,
+        duration: 2.3,
         delay: 0.1,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: [0.45, 0.25, 0.25, 0.75],
       },
     },
   };
