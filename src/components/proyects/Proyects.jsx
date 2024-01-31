@@ -25,9 +25,9 @@ const Proyects = () => {
   return (
     <div className='flex flex-col gap-5 border-t py-10'>
       <Fade>
-        <h2 className='text-[#fff] lg:text-[66px]'>Featured Projects</h2>
+        <h2 className='text-[#fff] lg:text-[66px]'>Mejores Projectos</h2>
       </Fade>
-      <p className='subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[500px]'>Here are some of the selected projects that showcase my passion for front-end development.</p>
+      <p className='subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[500px]'>A continuación, te presento algunos de los proyectos seleccionados que reflejan mi dedicación al desarrollo front-end.</p>
       <div className='flex flex-col gap-[120px] '>
         {data.map((item) => (
           <div key={item.id} className='flex flex-col  px-0 gap-2 md:grid md:grid-cols-2'>
