@@ -27,9 +27,9 @@ const Hero = () => {
           </FadeRight>
           <FadeRight>
             <div className='flex items-center gap-3'>
-              <button className='bg-[#D3E97A] py-3 px-4 rounded-xl'>Contact me</button>
-              <Image src={github} />
-              <Image src={linkedin} />
+              <Link href='#contacto'><button className='bg-[#D3E97A] py-3 px-4 rounded-xl'>Contact me</button> </Link>
+              <Link target="_blank" href={'https://www.linkedin.com/in/danielfranchijs/'}><Image src={github} /> </Link>
+              <Link target="_blank" href={'https://github.com/danielfranchi555'}><Image src={linkedin} /> </Link>
             </div>
           </FadeRight>
         </article>

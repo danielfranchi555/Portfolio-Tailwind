@@ -23,7 +23,7 @@ const Proyects = () => {
 
 
   return (
-    <div className='flex flex-col gap-5 border-t py-10'>
+    <div id='proyectos' className='flex flex-col gap-5 border-t py-10'>
       <Fade>
         <h2 className='text-[#fff] lg:text-[66px]'>Mejores Projectos</h2>
       </Fade>
@@ -32,7 +32,7 @@ const Proyects = () => {
         {data.map((item) => (
           <div key={item.id} className='flex flex-col  px-0 gap-2 md:grid md:grid-cols-2'>
             <FadeRight>
-              <article className='bg-[#0A0A0A] rounded-xl lg:w-[600px] '>
+              <article className='bg-[#1A1A1A] rounded-xl lg:w-[600px] '>
                 <Image className='p-5  rounded-xl' src={item.image} />
               </article>
             </FadeRight>
@@ -40,23 +40,23 @@ const Proyects = () => {
                 <p className='title-proyects text-[#fff] text-[24px] lg:text-[32px]'>{item.title}</p>
                 <p className='text-[#C7C7C7] text-[16px] lg:text-[18px]'>{item.description}</p>
                 <div className='divide-y flex flex-col gap-3 '>
-                  <span className='text-[#fff] lg:text-[16px]'>PROYECT INFO</span>
+                  <span className='text-[#fff] lg:text-[16px]'>INFORMACION DEL PROYECTO</span>
                   <div className='py-2 flex justify-between'>
-                    <span className='text-[#FFF]'>Year</span>
+                    <span className='text-[#FFF]'>Año</span>
                     <span className='text-[#C7C7C7]' > {item.year}</span>
                   </div>
                   <div className='border-b py-2 flex justify-between'>
-                    <span className='text-[#ffff]'>Role</span>
+                    <span className='text-[#ffff]'>Rol</span>
                     <span className='text-[#C7C7C7]' > {item.role}</span>
                   </div>
                 </div>
                 <div className='flex text-[#D3E97A] gap-5'>
                   <div className='flex items-center'>
-                    <Link target='_blank' href={item.link}>LIVE DEMO </Link>
+                    <Link target='_blank' href={item.linkWeb}>VER SITIO </Link>
                     <MdArrowOutward />
                   </div>
                   <div className='flex items-center'>
-                    <Link href='/'>SEE ON GITHUB </Link>
+                    <Link target='_blank' href={item.linkGithub}>VER EN GITHUB </Link>
                     <MdArrowOutward />
 
                   </div>

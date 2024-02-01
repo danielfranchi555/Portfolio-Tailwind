@@ -16,9 +16,10 @@ export const data = [
       title: 'Agency Marketing',
       description: 'Landing page desarrollada con NextJs, tailwind css para la customizacion y Framer motion para la implemetacion de animaciones',
       arrow: arrow,
-      year:'2023',
+      year:'2024',
       role:'Frontend developer',
-      link: "https://agenone-zk4d.vercel.app/"
+      linkGithub:'https://github.com/danielfranchi555/Agenone',
+      linkWeb: "https://agenone-zk4d.vercel.app/"
    },
    {
       id: 2,
@@ -29,8 +30,8 @@ export const data = [
       arrow: arrow,
       year:'2024',
       role:'Frontend developer',
-      link: "https://gym-proyect-lilac.vercel.app/"
-
+      linkWeb: "https://gym-proyect-lilac.vercel.app/",
+      linkGithub:'https://github.com/danielfranchi555/gym-proyect'
    },
    {
       id: 3,
@@ -41,7 +42,8 @@ export const data = [
       arrow: arrow,
       year:'2024',
       role:'Frontend developer',
-      link: "https://agency-marketing-f6z7.vercel.app/"
+      linkWeb: "https://agency-marketing-f6z7.vercel.app/",
+      linkGithub:'https://github.com/danielfranchi555/Ecommerce-GoogleSheets'
    },
 
 ]
