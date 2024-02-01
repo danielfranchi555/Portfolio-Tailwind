@@ -27,7 +27,7 @@ const Proyects = () => {
       <Fade>
         <h2 className='text-[#fff] lg:text-[66px]'>Mejores Projectos</h2>
       </Fade>
-      <p className='subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[500px]'>A continuación, te presento algunos de los proyectos seleccionados que reflejan mi dedicación al desarrollo front-end.</p>
+      <p className='subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[600px]'>A continuación, te presento algunos de los proyectos seleccionados que reflejan mi dedicación al desarrollo front-end.</p>
       <div className='flex flex-col gap-[120px] '>
         {data.map((item) => (
           <div key={item.id} className='flex flex-col  px-0 gap-2 md:grid md:grid-cols-2'>
@@ -52,7 +52,7 @@ const Proyects = () => {
                 </div>
                 <div className='flex text-[#D3E97A] gap-5'>
                   <div className='flex items-center'>
-                    <Link href='/'>LIVE DEMO </Link>
+                    <Link target='_blank' href={item.link}>LIVE DEMO </Link>
                     <MdArrowOutward />
                   </div>
                   <div className='flex items-center'>

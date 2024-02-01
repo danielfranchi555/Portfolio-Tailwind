@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
-import foto from '../../public/foto-cv-7-min.jpg'
+import foto from '../../public/foto-cv-3.png'
 import FadeLeft from './fade/FadeLeft'
 import FadeRight from './fade/FadeRight'
 import Fade from './fade/Fade'
@@ -23,7 +23,7 @@ const Hero = () => {
             <h1 className='text-[#ffff] text-4xl md:text-5xl lg:text-7xl'>hola, mi nombre es Daniel Franchi.</h1>
           </FadeRight>
           <FadeRight>
-            <p className='text-[#C7C7C7] md:text-1xl  lg:text-[18px] max-w-[500px] '>Mi enfoque se centra en construir experiencias digitales que sean accesibles para todos y fáciles de usar.</p>
+            <p className='text-[#C7C7C7] md:text-1xl  lg:text-[18px] max-w-[500px] '>Ofrezco soluciones personalizadas que impulsan el crecimiento y el éxito de tu negocio, me esfuerzo por superar tus expectativas y alcanzar resultados excepcionales juntos</p>
           </FadeRight>
           <FadeRight>
             <div className='flex items-center gap-3'>

@@ -37,7 +37,7 @@ export const data = [
       image: proyectThree,
       name: 'App',
       title: 'Tienda Online',
-      description: 'Tienda online utilizando Vite para la creacion del proyecto, ChakraUi para los estilos y Google Sheets como base de datos ',
+      description: 'Tienda online automatizada para que los productos se manden a WhatsApp usando como base de datos Google Sheets ',
       arrow: arrow,
       year:'2024',
       role:'Frontend developer',
