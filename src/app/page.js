@@ -1,6 +1,6 @@
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/Footer";
-import Form from "@/components/Form/Form";
+import ContainerForm from "@/components/Form/ContainerForm";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
@@ -22,7 +22,7 @@ export default function Home() {
           <Skills />
           <Proyects />
           <AboutMe />
-          <Form />
+          <ContainerForm/>
           <Footer />
         </div>
         <ThemeSwitcher />

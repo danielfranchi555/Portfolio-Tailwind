@@ -1,0 +1,23 @@
+
+  
+   .container  {
+    margin: 0 auto;
+    padding: 20px 0 48px
+  }
+  
+
+  .paragraph{
+    font-size: 16px;
+    line-height: 26px,
+  };
+  
+  .hr {
+    border:solid 1px #cccccc;
+    margin: 20px 0,
+  };
+  
+  .footer{
+    color: #8898aa;
+    font-size: 12px,
+  };
+  
