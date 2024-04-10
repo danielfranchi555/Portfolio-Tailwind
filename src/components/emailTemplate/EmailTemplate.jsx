@@ -10,7 +10,7 @@ import {
 } from "@react-email/components";
 import "./style.css";
 
-const EmailTemplate = ({ name,date }) => (
+const EmailTemplate = ({ name,email }) => (
 
   <Html>
     <Preview>Formulario recibido</Preview>

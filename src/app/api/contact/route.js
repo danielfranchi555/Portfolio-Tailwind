@@ -5,10 +5,6 @@ import EmailTemplate from "@/components/emailTemplate/EmailTemplate";
 
 export async function POST(request) {
 
-  // const date = new date();
-
-  // const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
-
   const { message, email, name } = await request.json();
 
   try {
@@ -37,7 +33,9 @@ export async function POST(request) {
       from: `Daniel Franchi <danielfranchi3@gmail.com>`,
       to: "danielfranchi3@gmail.com",
       subject: `Has recibido un mensaje de ${email}`,
-      html: `Mensaje:${message}`,
+      html: `Mensaje:${message}<br></br>
+             Correo:${email}
+      `,
     });
 
     return NextResponse.json({ message: "correo enviado" });
