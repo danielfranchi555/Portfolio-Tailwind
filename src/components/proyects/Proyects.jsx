@@ -26,12 +26,11 @@ const Proyects = () => {
   return (
     <div id="proyectos" className="flex flex-col gap-5 border-t py-10">
       <Fade>
-        <h2 className="text-[#fff] lg:text-[66px]">Mejores Projectos</h2>
+        <h2 className="text-[#fff] lg:text-[66px]">Mejores Proyectos</h2>
       </Fade>
       <p className="subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[600px]">
         A continuación, te presento algunos de los proyectos seleccionados que
-        reflejan mi dedicación al desarrollo front-end y back transition
-        duration-200-end
+        reflejan mi dedicación al desarrollo front-end y back-end
       </p>
       <div className="flex items-center gap-4">
         <button
