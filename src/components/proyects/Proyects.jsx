@@ -2,62 +2,66 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { data } from "./data";
-import Fade from "../fade/Fade";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
-import FadeRight from "../fade/FadeRight";
-import FadeLeft from "../fade/FadeLeft";
-import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+import Transition from "../Transitions/Transition";
 
 const Proyects = () => {
-  const [more, setMore] = useState(false);
   const [mostrarTres, setMostrarTres] = useState(true);
   const [filter, setFilter] = useState(data);
-
-  const toogle = () => {
-    console.log("more changed");
-    setMostrarTres(!mostrarTres);
-  };
 
   const filterProyects = (category) => {
     setFilter(data.filter((prod) => prod.type === category));
   };
 
   return (
-    <div id="proyectos" className="flex flex-col gap-5 border-t py-10">
-      <Fade>
-        <h2 className="text-[#fff] lg:text-[66px]">Mejores Proyectos</h2>
-      </Fade>
-      <p className="subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[600px]">
-        A continuación, te presento algunos de los proyectos seleccionados que
-        reflejan mi dedicación al desarrollo front-end y back-end
-      </p>
-      <div className="flex items-center gap-4">
-        <button
-          onClick={() => filterProyects("Landing")}
-          className="border-b px-4 py-2 text-start hover:bg-[#D3E97A]  hover:text-black transition duration-200"
+    <div id="proyectos" className="flex flex-col gap-5 border-t py-10 ">
+      <div>
+        <Transition delay={0.2}>
+          <h2 className="text-[#fff] lg:text-[66px]">Mejores Proyectos</h2>
+        </Transition>
+        <Transition
+          delay={0.4}
+          className="subtitle-proyects text-[#C7C7C7] lg:text-[18px] lg:max-w-[600px]"
         >
-          Landing Pages
-        </button>
-        <button
-          onClick={() => filterProyects("Aplications web")}
-          className="border-b px-4 py-2 text-start hover:bg-[#D3E97A]  hover:text-black transition duration-200"
-        >
-          Aplications Web
-        </button>
+          A continuación, te presento algunos de los proyectos seleccionados que
+          reflejan mi dedicación al desarrollo front-end y back-end
+        </Transition>
       </div>
-      <div className="flex flex-col gap-[120px] ">
-        {filter?.map((item) => (
+
+      <div className="flex flex-col gap-10 md:mt-10 ">
+        <div className="flex items-center gap-4 ">
+          <Transition delay={0.6}>
+            <button
+              onClick={() => filterProyects("Landing")}
+              className="border-b px-4 py-2 text-start hover:bg-[#D3E97A]  hover:text-black transition duration-200"
+            >
+              Landing Pages
+            </button>
+          </Transition>
+          <Transition delay={0.8}>
+            <button
+              delay={1}
+              onClick={() => filterProyects("Aplications web")}
+              className="border-b px-4 py-2 text-start hover:bg-[#D3E97A]  hover:text-black transition duration-200"
+            >
+              Aplications Web
+            </button>
+          </Transition>
+        </div>
+        {filter?.map((item, index) => (
           <div
             key={item.id}
-            className="flex flex-col  px-0 gap-2 md:grid md:grid-cols-2"
+            className="flex flex-col  px-0 gap-10 md:grid md:grid-cols-2"
           >
-            <FadeRight>
+            <Transition delay={0.5 + index * 0.1}>
+              {" "}
               <article className="bg-[#1A1A1A] rounded-xl lg:w-[600px] ">
                 <Image className="p-5  rounded-xl" src={item.image} />
               </article>
-            </FadeRight>
-            <FadeLeft className="flex flex-col gap-5 justify-center">
+            </Transition>
+            <Transition delay={0.5 + index * 0.1}>
               <p className="title-proyects text-[#fff] text-[24px] lg:text-[32px]">
                 {item.title}
               </p>
@@ -81,10 +85,13 @@ const Proyects = () => {
                     Technologies
                   </span>
                   <div className=" flex justify-end md:flex md:gap-4 w-full md:w-auto gap-2">
-                    {item.technologies?.map((item) => (
-                      <span className="text-[#C7C7C7] md:border rounded-xl flex items-center justify-center md:px-[8px]  text-[10px] md:text-[12px] font-semibold">
+                    {item.technologies?.map((item, index) => (
+                      <Transition
+                        delay={index * 0.1}
+                        className="text-[#C7C7C7] md:border rounded-xl flex items-center justify-center md:px-[8px]  text-[10px] md:text-[12px] font-semibold"
+                      >
                         {item}
-                      </span>
+                      </Transition>
                     ))}
                   </div>
                 </div>
@@ -103,7 +110,7 @@ const Proyects = () => {
                   <MdArrowOutward />
                 </div>
               </div>
-            </FadeLeft>
+            </Transition>
           </div>
         ))}
       </div>

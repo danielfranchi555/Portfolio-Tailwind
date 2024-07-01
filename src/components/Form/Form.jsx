@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { ImCheckboxChecked } from "react-icons/im";
 
-
 const Form = () => {
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
@@ -22,7 +21,7 @@ const Form = () => {
   });
 
   const submit = async (info) => {
-    setEnviando(true)
+    setEnviando(true);
     try {
       const resp = await fetch("/api/contact", {
         method: "POST",
@@ -35,10 +34,9 @@ const Form = () => {
       if (resp.ok) {
         console.log(data);
         reset();
-        setEnviado(true)
-        setEnviando(false)
+        setEnviado(true);
+        setEnviando(false);
       }
-    
     } catch (error) {
       console.log({ message: error });
     }
@@ -56,7 +54,7 @@ const Form = () => {
         {...register("name")}
       />
       {errors.name?.message && (
-        <p className="text-red-400">{errors.name?.message}</p>
+        <p className="text-[13px] text-red-400">{errors.name?.message}</p>
       )}
       <label className="text-white py-4">Email</label>
       <input
@@ -68,7 +66,7 @@ const Form = () => {
         {...register("email")}
       />
       {errors.email?.message && (
-        <p className="text-red-400">{errors.email?.message}</p>
+        <p className="text-[13px] text-red-400">{errors.email?.message}</p>
       )}
       <label className="text-white py-4 ">Mensaje</label>
       <textarea
@@ -95,7 +93,11 @@ const Form = () => {
             className="rounded-md flex items-center justify-center  bg-[#D3E97A] w-full py-3 cursor-pointer"
             type="submit"
           >
-            <input className='rounded-md  py-3 cursor-pointer text-black' type="submit" value={`${enviando ? 'Enviando...' : 'Enviar'}`} />
+            <input
+              className="rounded-md  py-3 cursor-pointer text-black"
+              type="submit"
+              value={`${enviando ? "Enviando..." : "Enviar"}`}
+            />
           </button>
         )}
       </div>

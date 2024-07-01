@@ -36,13 +36,19 @@ const Hero = () => {
                 target="_blank"
                 href={"https://github.com/danielfranchi555"}
               >
-                <Image src={github} className="hover:scale-105 transition duration-200 ease-in-out" />
+                <Image
+                  src={github}
+                  className="hover:scale-105 transition duration-200 ease-in-out"
+                />
               </Link>
               <Link
                 target="_blank"
                 href={"https://www.linkedin.com/in/danielfranchijs/"}
               >
-                <Image src={linkedin} className="hover:scale-105 transition duration-200 ease-in-out"  />{" "}
+                <Image
+                  src={linkedin}
+                  className="hover:scale-105 transition duration-200 ease-in-out"
+                />{" "}
               </Link>
             </div>
           </FadeRight>
@@ -50,9 +56,9 @@ const Hero = () => {
         <article className="md:flex">
           <FadeLeft className="md:w-[300px] lg:w-[500px]">
             <Image
-              src={foto}
-              width="auto"
-              height="auto"
+              src="https://res.cloudinary.com/dcotr8wpa/image/upload/v1719794411/portfolio/img-portfolio_cplvm4.webp"
+              width={600}
+              height={600}
               className="rounded-xl w-full h-full object-cover "
             />
           </FadeLeft>
